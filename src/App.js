@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function App() {
   const [location, setLocation] = useState(false); //Aprovará o usuário de fornecer a sua localização
-  const [weather, setWeather] = useState(false);
+  const [weather, setWeather] = useState(false);  //Guarda dados da API
 
   let getWeather = async (lat, long) => {
     let res = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
@@ -52,4 +52,6 @@ function App() {
     );
   }
 }
+/*pega a api com o fetch que captura os dados do Json e 
+manipula esses dados com o evento click e mostra os planetas*/
 export default App;
